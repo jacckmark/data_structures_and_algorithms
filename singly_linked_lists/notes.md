@@ -19,4 +19,25 @@
 
 4. Complexity comparision for basic operations in arrays and linked lists (singly linked lists):
 
-![arrays vs singly linked lists](./assets/linked_lists_vs_arrays_comparision.png)
+![arrays vs singly linked lists](../assets/linked_lists_vs_arrays_comparision.png)
+
+5. Linked list example:
+
+```js
+  let thirdEl = {
+    value: 2,
+    next: null
+  }
+
+  let secondEl = {
+    value: 2,
+    next: thirdEl
+  }
+
+  let firstEl = {
+    value: 1,
+    next: secondEl
+  }
+```
+
+This way firstEl has info about secondEl within it and we know where to find it in case we want to edit it.
