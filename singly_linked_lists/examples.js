@@ -152,7 +152,7 @@ class LinkedList {
     // we know that item should be added on the end of the list so we reuse push
     if (index === this.length) return this.push(value);
     // here we are checking if passes to function index is legit (if not return false)
-    if (index < 0 || index > this.length) return false;
+    if (index < 0 || index >= this.length) return false;
 
     const newNode = new Node(value);
     // we want to point to one item before place where the item should be added
@@ -172,7 +172,7 @@ class LinkedList {
   remove(index) {
     if (index === 0) return this.shift(value);
     if (index === this.length - 1) return this.pop(value);
-    if (index < 0 || index > this.length) return undefined;
+    if (index < 0 || index >= this.length) return undefined;
 
     // item before the item we want to remove
     const before = this.get(index - 1);
@@ -221,48 +221,48 @@ class LinkedList {
   }
 }
 
-console.log("\nlinked list after creating one");
+console.log("\nafter creating one");
 let myLinkedList = new LinkedList(4);
 console.log(myLinkedList);
 
-console.log("\nlinked list after running push");
+console.log("\nafter running push");
 myLinkedList.push(14);
 myLinkedList.push(231);
 myLinkedList.push(4444);
 myLinkedList.push(0);
 console.log(myLinkedList);
 
-console.log("\nlinked list after running pop");
+console.log("\nafter running pop");
 myLinkedList.pop();
 console.log(myLinkedList);
 
-console.log("\nlinked list after running unshift");
+console.log("\nafter running unshift");
 myLinkedList.unshift(111);
 console.log(myLinkedList);
 
-console.log("\nlinked list after running shift");
+console.log("\nafter running shift");
 myLinkedList.shift();
 console.log(myLinkedList);
 
-console.log("\nlinked list after running get");
+console.log("\nafter running get");
 console.log(`1000th item in list ${myLinkedList.get(1000)}`);
 console.log(`-1 item in list ${myLinkedList.get(-1)}`);
 console.log(`third item in list ${JSON.stringify(myLinkedList.get(2))}`);
 
-console.log("\nlinked list after running set");
+console.log("\nafter running set");
 console.log(`set item nr 1 in list to 10 ${myLinkedList.set(1, 10)}`);
 console.log(myLinkedList.get(1));
 console.log(`set item nr -1 to 10 ${myLinkedList.set(-1, 10)}`);
 
-console.log("\nlinked list after running insert");
+console.log("\nafter running insert");
 myLinkedList.insert(1, 123);
 console.log(myLinkedList);
 
-console.log("\nlinked list after running remove");
+console.log("\nafter running remove");
 myLinkedList.remove(1);
 console.log(myLinkedList);
 
-console.log("\nlinked list reversal");
+console.log("\nafter running reverse");
 const myLinkedList2 = new LinkedList(222);
 myLinkedList2.push(12);
 myLinkedList2.push(424);
