@@ -132,7 +132,7 @@ function logItems(a, b) {
 }
 ```
 
-- Another example would be the two nested for loops with 2 inputs. We also cannot say about example below that this is O($n^2$) because the number of operations will depend upon a and b. So the complexity will be O(a \ b).
+- Another example would be the two nested for loops with 2 inputs. We also cannot say about example below that this is O($n^2$) because the number of operations will depend upon a and b. So the complexity will be O(a * b).
 
 ```js
 function logItems(a, b) {
