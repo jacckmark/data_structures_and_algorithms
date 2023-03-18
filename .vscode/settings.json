@@ -1,6 +1,5 @@
-
 {
   "markdownlint.config": {
-  "MD049": { "style": "asterisk" }
-}
+    "MD049": { "style": "asterisk" }
+  }
 }
