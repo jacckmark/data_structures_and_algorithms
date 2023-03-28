@@ -92,7 +92,7 @@ class DoublyLinkedList {
     let temp = this.head;
 
     // this is much needed optimization, because like in the singly linked list
-    // we have to traverse whole list, but here are 2 options because sometimes
+    // we have to traverse whole list, but here are 2 options, because sometimes
     // it might be faster to traverse it from the end to the beginning rather
     // than from the beginning to the end
     if (index < this.length / 2) {
@@ -117,7 +117,8 @@ class DoublyLinkedList {
     let temp = this.get(index);
 
     // if get returned the truthy value we can set the value for this item (otherwise)
-    // we know that either this index is wrong
+    // we know that either this index is wrong, or the list is empty, so set operation
+    // would not be possible
     if (temp) {
       temp.value = value;
       return true;
@@ -131,8 +132,8 @@ class DoublyLinkedList {
     if (index === this.length - 1) return this.push(value);
     if (index < 0 || index >= this.length) return false;
 
-    // code for adding element in the middle (cases for in the end or in the
-    // beginning are covered using push and unshift)
+    // code for adding element in the middle (cases for 'in the end' or 'in the
+    // beginning' are covered using push and unshift)
     const newNode = new Node(value);
     let before = this.get(index - 1);
     let after = before.next;

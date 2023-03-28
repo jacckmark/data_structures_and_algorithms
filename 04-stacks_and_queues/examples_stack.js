@@ -22,7 +22,7 @@ class Stack {
     } else {
       // in case there is something in the stack we have to set the next in our
       // newNode to point to the same thing as top (to previously last element)
-      // and we have to change the top to point to nowNode
+      // and we have to change the top to point to newNode
       newNode.next = this.top;
       this.top = newNode;
     }

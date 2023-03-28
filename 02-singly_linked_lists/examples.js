@@ -25,7 +25,7 @@ class LinkedList {
       // we change where the tail points (instead of the null we point it into our newly
       // created object)
       this.tail.next = newNode;
-      // we set the tail to new object
+      // we move the tail pointer onto our new node
       this.tail = newNode;
     }
     // we have to keep track of linked list length
@@ -44,9 +44,10 @@ class LinkedList {
     // we are looping over the whole linked list to find one before last element
     // in the linked list (element before element that has null as 'next' property)
     while (temp.next) {
-      // here we are moving the pre and temp temp is moved to the next item in the
+      // here we are moving the pre and temp, temp is moved to the next item in the
       // list and pre is moved to the item temp previously occupied. This way
-      // we have access to element before while going over current element
+      // we have access to element before while going over current element and
+      // checking if next is falsy
       pre = temp;
       temp = temp.next;
     }

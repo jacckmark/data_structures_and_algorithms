@@ -36,7 +36,7 @@ class Queue {
     let temp = this.first;
 
     if (this.length === 1) {
-      // in case there is only one element we want to set firs and last to null
+      // in case there is only one element we want to set first and last to null
       this.first = null;
       this.last = null;
     } else {

@@ -87,8 +87,8 @@ class BST {
         return true;
       }
     }
-    // if the temp is ever equal to null we know that we have searched the tree
-    // and the element does not occur there
+    // if the temp is ever equal to null we know that we have searched the whole
+    // tree and the element does not occur there
     return false;
   }
 
@@ -104,7 +104,7 @@ class BST {
     }
 
     // when we reached null we know that this is the tree's end and we can return
-    // the smaller element
+    // the smallest element
     return currentNode;
   }
 }

@@ -6,17 +6,17 @@
 
 4. Big O can have 3 types of cases:
 
-- best case(Ω omega letter) - when looking for element in array, which is 7 elements long, the first element you checked,
-- average case(Θ theta letter) - when looking for element in array, which is 7 elements long, the fourth element you checked,
-- worst case(Ο omicron letter) - when looking for element in array, which is 7 elements long, the seventh element you checked,
+- best case(Ω omega letter) - when looking for element in array, which is 7 elements long, the first element you checked is the searched element,
+- average case(Θ theta letter) - when looking for element in array, which is 7 elements long, the fourth element you checked is the searched element,
+- worst case(Ο omicron letter) - when looking for element in array, which is 7 elements long, the seventh element you checked is the searched element,
 
 5. O notation - shows us the Big O notation. Written as O(n) or O($n^2$) or similar.
 
-6. There are 4 most popular O notations that we can "meet in the wild":
+6. There are 4 most popular O notations that we can meet:
 
 - O(1) - sometimes called "constant". When there is only one operation needed to reach the goal,
 - O($log{n}$) - sometimes called "divide and conquer". Amount of operations correlates to number of items or passed parameter. Is the second most performant O,
-- O(n) - sometimes called "proportional". When the amount of operations is dependent either upon the parameter passed to function or array length or something different,
+- O(n) - sometimes called "proportional". When the amount of operations is dependent either upon the parameter passed to function, or array length, or something different,
 - O($n^2$) - sometimes called "loop within loop". When the amount of operations is dependent upon not only parameter passed into the function (or array length), but also number of nested loops,
 
 7. O(n) example:
@@ -30,6 +30,7 @@ function logItems(n) {
 ```
 
 8. Droping constants - this means that when we are representing the big O for code where there would be for example two loops independently looping over an array, we would not say that this code is O(2n) but that it is O(n).
+
 9. O(2n) example:
 
 ```js
@@ -114,7 +115,7 @@ function returnDoubleSum(n) {
 
 Here this code would be written as O(1) even if there are actually 2 operations because of the simplifying.
 
-16. O($log{n}$) - good example is looking for element in sorted array. The array we want to search has 8 elements with each containing an number from 1 to 8. We can find element 1 by using divide and conquer (divide elements in equal parts and check for element you are looking for until you will find your element). This would cause to make 3 operations to find element 1 so the complexity would be O($log{_2}{8}$) because $log{_2}{8}$=3. We would say that this example is O{${n}$}.
+16. O($log{n}$) - good example is looking for element in sorted array. The array we want to search has 8 elements with each containing an number from 1 to 8. We can find element 1 by using divide and conquer (divide elements in equal parts and check for element you are looking for until you will find your element). This would cause to make 3 operations to find element 1 so the complexity would be O($log{_2}{8}$) because $log{_2}{8}$=3. We would say that this example is O{$log{n}$}.
 
 17. Different terms of input.
 

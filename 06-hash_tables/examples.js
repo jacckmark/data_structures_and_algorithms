@@ -1,11 +1,11 @@
-// here implementation of hash table using array in JS but we can just use Map
-// when we want to use hash table in JS
+// here implementation of hash table using array in JS, but we can just use Map
+// when we want to use hash table in JS "out of the box"
 class HashTable {
   constructor(size = 7) {
     this.dataMap = new Array(size);
   }
 
-  // underscore tell other developer that this is a method that should be called
+  // underscore tells other developer that this is a method that should be called
   // only by other methods
   _hash(key) {
     // variable holding our hash
@@ -14,7 +14,7 @@ class HashTable {
       // this will generate hash based on keys in our key (we are multiplying char
       // code by 23 which is prime number (resulting hash will be more random) and
       // then we are doing remainder using our dataMap length (in our case 7), this
-      // will make sure that we will always get number between 0 and 6 which is
+      // will make sure that we will always get number between 0 and 6 which are
       // the places we can put our data in our hash table)
       hash = (hash + key.charCodeAt(i) * 23) % this.dataMap.length;
     }
@@ -25,7 +25,7 @@ class HashTable {
     // this is index in our hash table where to put our item
     let index = this._hash(key);
 
-    // we add new array table (to pointed by hash table) place, but only if there
+    // we add new array table (to pointed by hash table place), but only if there
     // is currently nothing there (there might already be there something, then we
     // want to just add the new item into existing array)
     if (!this.dataMap[index]) {
