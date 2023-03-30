@@ -25,7 +25,7 @@ function merge(arr1, arr2) {
   // here we cover the case when we already sorted all the elements of either
   // arr1 or arr2, we broke from previous while loop and we still have some elements.
   // Now we do need to push remaining elements (the elements in passed arrays are
-  // already sorted so if there are elements in for example arr2 left then we
+  // already sorted so if there are elements in for example arr2 left, then we
   // should only push them one by one to combined array)
   while (i < arr1.length) {
     combined.push(arr1[i]);
