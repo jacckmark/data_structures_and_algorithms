@@ -48,13 +48,13 @@ function selectionSort(array) {
       // we are swapping items only if the lowest item is not the item in spot we
       // try to fill in (there is a possibility that currently lowest item will be
       // on the good spot, then we will get the same index for i and min)
-      if (i !== min) {
-        // we are swapping items places to place lowest item on the spot we are
-        // trying to fill
-        let temp = array[i];
-        array[i] = array[min];
-        array[min] = temp;
-      }
+    }
+    if (i !== min) {
+      // we are swapping items places to place lowest item on the spot we are
+      // trying to fill
+      let temp = array[i];
+      array[i] = array[min];
+      array[min] = temp;
     }
   }
   return array;
