@@ -170,7 +170,7 @@ console.log(fibonacci2(11));
 console.log(fibonacci2(77));
 
 // fibonacci written using for loop (second example)
-function fibonacci(number) {
+function fibonacci3(number) {
   if (number < 2) return number;
   if (number === 2) return 1;
 
@@ -188,15 +188,15 @@ function fibonacci(number) {
 }
 
 console.log("*FOR LOOP");
-console.log(fibonacci(1));
-console.log(fibonacci(2));
-console.log(fibonacci(3));
-console.log(fibonacci(4));
-console.log(fibonacci(5));
-console.log(fibonacci(6));
-console.log(fibonacci(7));
-console.log(fibonacci(8));
-console.log(fibonacci(9));
-console.log(fibonacci(10));
-console.log(fibonacci(11));
-console.log(fibonacci(77));
+console.log(fibonacci3(1));
+console.log(fibonacci3(2));
+console.log(fibonacci3(3));
+console.log(fibonacci3(4));
+console.log(fibonacci3(5));
+console.log(fibonacci3(6));
+console.log(fibonacci3(7));
+console.log(fibonacci3(8));
+console.log(fibonacci3(9));
+console.log(fibonacci3(10));
+console.log(fibonacci3(11));
+console.log(fibonacci3(77));
